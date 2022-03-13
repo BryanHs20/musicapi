@@ -13,4 +13,10 @@ class Songs2Controller extends Controller
         $apiapi=Music::all();
         return response()->json(['cancion'=>$apiapi]);
     }
+
+    public function consumoApi($id)
+    {
+        $conapi=Music::find($id);
+        return response()->json(['cancion'=>$conapi]);
+    }
 }

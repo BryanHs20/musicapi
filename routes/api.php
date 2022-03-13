@@ -21,5 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/canciones', [Songs2Controller::class, 'mostrarSong']);
+Route::get('/verCancion/{id}', [Songs2Controller::class, 'consumoApi']);
 
 
