@@ -478,5 +478,31 @@ class SongsController extends Controller
         return view('landing');
     }
 
+    public function consumirArtista()
+    {
+        /* http:elrincondelartista.herokuapp.com/api/verartista/2 */
+        $cliente67=new \GuzzleHttp\Client();
+        $response67=$cliente67->request('get', 'http://elrincondelartista.herokuapp.com/api/Artista');//Cancerbero-Cancion De La Prision
+        $datos67=json_decode($response67->getBody()->getContents(),true);
+
+        /* $arrayrap2 = array($datos67['Artista']); */
+        $musicasrap2=[];
+
+        foreach($datos67['Artista'] as $cancionrap2){
+
+            $musicasrap2[] = [
+                'Id'=> $cancionrap2['id'], 
+                'Nombre' => $cancionrap2['nombre'],
+                'Imagen' => $cancionrap2['imagen'],
+                'Descripcion' => $cancionrap2['descripcion'],
+                'Pais' => $cancionrap2['pais'],
+                'Alias' => $cancionrap2['alias']
+            ];
+        }
+        return view('artistas', ['musicasrap2'=>$musicasrap2]);
+        /* echo '<pre>';
+        print_r($musicasrap2);
+        echo '</pre>'; */
+    }
 }
  

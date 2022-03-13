@@ -29,7 +29,7 @@
 					<nav id="menu">
                         <ul class="links">
                             <li><a href="{{route('vista.genero')}}">Inicio</a></li>
-                            <li><a href="landing.html">Artistas</a></li>
+                            <li><a href="{{route('vista.artista')}}">Artistas</a></li>
                             <li><a href="generic.html">Letras</a></li>
                         </ul>
                     </nav>
@@ -79,7 +79,7 @@
 							<ul class="icons">
 								<li><a href="https://twitter.com/laravelphp" target="_blank" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
 								<li><a href="https://www.facebook.com/UniversidadPolitecnicadeTecamac" target="_blank" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.instagram.com/anuel/" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+								<li><a href="https://www.instagram.com/ozuna/?hl=es-la" target="_blank" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
 								<li><a href="https://github.com/BryanHs20/musicapi" target="_blank" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
 							</ul>
 							<ul class="copyright">
