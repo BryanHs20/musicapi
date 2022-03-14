@@ -30,7 +30,7 @@
                         <ul class="links">
                             <li><a href="{{route('vista.genero')}}">Inicio</a></li>
                             <li><a href="{{route('vista.artista')}}">Artistas</a></li>
-                            <li><a href="generic.html">Letras</a></li>
+                            <li><a href="{{route('vista.letra')}}">Letras</a></li>
                         </ul>
                     </nav>
 				<!-- Note: The "styleN" class below should match that of the header element. -->
@@ -63,7 +63,7 @@
 											</header>
 											<p>Duracion: {{$pop['Duracion']}}</p>
 											<ul class="actions">
-												<li><a href="generic.html" class="button">Ver letra</a></li>
+												<li><a href="{{route('vista.letra')}}" class="button">Ver letra</a></li>
 											</ul>
 										</div>
 									</div>

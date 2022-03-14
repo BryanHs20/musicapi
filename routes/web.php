@@ -31,6 +31,8 @@ Route::get('/verCancionesTrap', [SongsController::class, 'verTrap'])->name('vist
 Route::get('/verCancionesRap', [SongsController::class, 'verRap'])->name('vista.rap');
 
 Route::get('/verArtistas', [SongsController::class, 'consumirArtista'])->name('vista.artista');
+Route::get('/verLetra', [SongsController::class, 'consumirLetra'])->name('vista.letra');
+
 
 /* Route::get('/verRock', [SongsController::class, 'verRock'])->name('vista.cancion');
 Route::get('/verPop', [SongsController::class, 'verPop'])->name('vista.cancion');

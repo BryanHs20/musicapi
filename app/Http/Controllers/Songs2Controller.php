@@ -19,4 +19,10 @@ class Songs2Controller extends Controller
         $conapi=Music::find($id);
         return response()->json(['cancion'=>$conapi]);
     }
+
+    public function consumoLetra($id)
+    {
+        $letrapi=Music::find($id);
+        return response()->json(['cancion'=>$letrapi]);
+    }
 }

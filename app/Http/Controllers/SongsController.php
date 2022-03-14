@@ -504,5 +504,29 @@ class SongsController extends Controller
         print_r($musicasrap2);
         echo '</pre>'; */
     }
+
+    public function consumirLetra()
+    {
+        $cliente1=new \GuzzleHttp\Client();
+        $response1=$cliente1->request('get', 'https://apiletrascanciones.herokuapp.com/api/Canciones');//Let It Be
+        $datos1=json_decode($response1->getBody()->getContents(),true);
+
+        $musicas2=[];
+
+        foreach ($datos1['data'] as $letrascanciones){
+
+            $musicas2[] = [
+                'id' => $letrascanciones['id'],
+                'cantante' => $letrascanciones['cantante'],
+                'nombrecancion' => $letrascanciones['nombrecancion'],
+                'letra' => $letrascanciones['letra']
+
+            ];
+        }
+        return view('letra', ['musicas2'=>$musicas2]);
+        /* echo '<pre>';
+        print_r($musicas2);
+        echo '</pre>'; */
+    }
 }
  

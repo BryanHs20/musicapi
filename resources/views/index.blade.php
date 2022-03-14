@@ -30,7 +30,7 @@
                         <ul class="links">
                             <li><a href="{{route('vista.genero')}}">Inicio</a></li>
                             <li><a href="{{route('vista.artista')}}">Artistas</a></li>
-                            <li><a href="generic.html">Letras</a></li>
+                            <li><a href="{{route('vista.letra')}}">Letras</a></li>
                         </ul>
                     </nav>
 					<section id="banner" class="major"></section>
